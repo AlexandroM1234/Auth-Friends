@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../utils/axiosWtihAuth";
-import axios from "axios";
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
