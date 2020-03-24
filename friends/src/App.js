@@ -10,10 +10,10 @@ function App() {
     <Router>
       <div className="App">
         <Link to="/login">Login</Link>
-        <Link to="/protected">Protected Page</Link>
+        <Link to="/butts">Protected Page</Link>
       </div>
       <Switch>
-        <PrivateRoute exact path="/protected" component={FriendsList} />
+        <PrivateRoute exact path="/butts" component={FriendsList} />
         <Route path="/login" component={Login} />
       </Switch>
     </Router>
