@@ -17,10 +17,15 @@ const Login = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // axiosWithAuth()
-    axios.post("http://localhost:5000/api/login", credentials).then(res => {
-      console.log(res);
-    });
+    axiosWithAuth()
+      .post("http://localhost:5000/api/login", credentials)
+      .then(res => {
+        // console.log(res.data);
+        localStorage.setItem("token", JSON.stringify(res.data.payload));
+      })
+      .catch(err => {
+        console.log(err.response);
+      });
   };
 
   return (
